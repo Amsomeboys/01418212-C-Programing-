@@ -2,7 +2,7 @@
 
 main()
 {
-    char flight,tf,tmp;
+    char flight,tf;
     float time;
     int next =0;
     int error =1;
@@ -14,7 +14,7 @@ main()
 
         while(flight == 'q' && tf != 'x')
         {
-            printf("End Program");
+            printf("\n\"End Program\"\n");
             tf = 'x';
         }
 
@@ -22,21 +22,20 @@ main()
         {
             printf("Search By Departure Time\n");
             next++;
-            tmp=flight;
-            while(tmp =='D' && next == 1 && tf != 'P' || tf != 'A')
+            while(flight =='D' && next == 1 && tf != 'P' || tf != 'A')
             {
-                
+
                 printf("Post Meridiem Press:(P) or Ante Meridiem Press:(A) : ");
                 scanf(" %c",&tf);
 
-                
+
 
                  while(tf == 'A' && next == 1 && error ==1)
                 {
                     printf("Enter Departure Time (H.mm): ");
                     scanf("%f",&time);
                      next++;
-                     
+
                      while(time > 7.99 && time < 8.01 && next ==2)
                     {
                         printf("\"Departure Time : 08.00 AM  and  Arrival Time : 10.16 AM\" \n\n");
@@ -58,7 +57,7 @@ main()
                         printf("\"No flight information of the this time\" \n\n");
                         next =1;
                     }
-                   
+
                 }
                 while(tf == 'P'&& next ==1 && error ==1)
                 {
@@ -87,15 +86,15 @@ main()
                         next =1;
                     }
                 }
-                
+
             }
         }
         while(flight == 'A' && next == 0)
         {
             printf("Search By Arrival Time \n");
             next++;
-            tmp=flight;
-            while(tmp =='A' && next == 1 && tf != 'P' || tf != 'A')
+
+            while(flight =='A' && next == 1 && tf != 'P' || tf != 'A')
             {
                 printf("Post Meridiem Press:(P) or Ante Meridiem Press:(A) : ");
                 scanf(" %c",&tf);
@@ -126,7 +125,7 @@ main()
                         printf("\"No flight information of the this time\" \n\n");
                         next=1;
                     }
-                   
+
                 }
                 while(tf == 'P'&& next ==1 && error ==1)
                 {
@@ -165,7 +164,7 @@ main()
                         next =1;
                     }
                 }
-                
+
             }
         }
         next =0;

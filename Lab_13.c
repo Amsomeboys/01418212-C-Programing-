@@ -1,42 +1,39 @@
 #include <stdio.h>
 
-int main(){
+main(){
 
-    int start = 1;
-    int end;
-    int count;
-    int error;
-    int i = 1;
+    int start,end,count;
+    int i;
+    int run = 0;
 
 
-    while(start == 1)
+
+    while(run == 0)
     {
-        error =0;
-
     printf("Please Input Start Number OR Enter 0 to stop program): ");
     scanf("%d",&start);
+    run++;
 
-    while( start == 0 || start < 0)
+    while( start == 0 )
     {
-        printf("End Program");
+        printf("\n\"End Program\" \n\n");
         break;
     }
 
-    while(start > 1)
+    while(start >= 1 && run == 1)
     {
     printf("\nPlease Input End Number : ");
     scanf("%d",&end);
 
     while(start > end)
     {
-        printf("Please enter start number more than end number");
+        printf("\n\"Please enter start number more than end number\"");
         start = 1;
         end = 1;
-        error =1;
-
+		run = 0;
     }
 
-    while(start > 0 && end > 0 && error != 1)
+    while(start > 0 && end > 0 && run == 1)
     {
         printf("\nPrime numbers in this range is :");
 
@@ -44,7 +41,7 @@ int main(){
        {
             i = 1;        // reset to default value every round
             count = 0;
-       
+
 
          while (i <= start && count < 3) // check i < start number ? and mod == 0 count < 3
          {
@@ -68,11 +65,7 @@ int main(){
         }
        printf("\n\n");
         start = 1;
+        run = 0;
 }
 }
 }
-
-
-
-
-

@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-int main()
+main()
 {
     char first,second,third,fourth,fifth,blank;
     int work = 0 ;
-   
+
 
     while(work == 0)
     {
@@ -14,7 +14,7 @@ int main()
 
         while(first == '/'&& work ==1)
         {
-            printf("End Program");
+            printf("\n\"End Program\"\n\n");
             break;
         }
 
@@ -33,7 +33,7 @@ int main()
         printf("Enter Fifth Word : ");
         scanf(" %c",&fifth);
 
-        
+
 
         while(first > second || second > third || third > fourth || fourth > fifth)
         {
@@ -62,9 +62,9 @@ int main()
                 fifth =blank;
             }
         }
-       
 
-              printf("%c %c %c %c %c",first,second,third,fourth,fifth);
+
+              printf("\n \"result : %c %c %c %c %c\"",first,second,third,fourth,fifth);
               printf("\n\n");
               work = 0;
         }

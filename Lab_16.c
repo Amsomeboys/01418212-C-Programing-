@@ -1,5 +1,5 @@
 #include <stdio.h>
- main()
+main()
  {
 
     float speed =0 ;
@@ -11,7 +11,7 @@ while(speed == 0 && finish == 0)
         scanf("%f",&speed);
     while(speed == -1 && finish != 1)
     {
-        printf("End Program");
+        printf("\nEnd Program");
         finish =1;
 
     }
@@ -55,5 +55,5 @@ while(speed == 0 && finish == 0)
     printf("\n\n");
     finish = 0;
 }
-   
+
  }
