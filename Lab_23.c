@@ -4,10 +4,10 @@ main()
 {
     char flight,tf;
     float time;
-    int next =0;
-    int error =1;
 
-    while(flight != 'q' && next == 0)
+
+
+    while(flight != 'q')
     {
         printf("Search By Departure Press:(D) Time or Arrival Press:(A) ? (press q to end program) : ");
         scanf(" %c",&flight);
@@ -77,25 +77,22 @@ main()
                    else
                     {
                         printf("\n\"No flight information of the this time\" \n\n");
-                        next =1;
+
                     }
                 }
-
-            }
         }
         if(flight == 'A' )
         {
             printf("\nSearch By Arrival Time \n\n");
-            next++;
 
-            if(flight =='A' )
-            {
-                printf("Post Meridiem Press:(P) or Ante Meridiem Press:(A) : ");
-                scanf(" %c",&tf);
+            printf("Post Meridiem Press:(P) or Ante Meridiem Press:(A) : ");
+            scanf(" %c",&tf);
 
+				if(tf == 'A' )
+				{
                 printf("\nEnter Arrival Time (H.mm): ");
                 scanf("%f",&time);
-                next++;
+
 
                      if(time > 10.159 && time < 10.161 )
                     {
@@ -150,7 +147,9 @@ main()
                     }
                 }
 
-            }
         }
+	}
+}
+
 
 
