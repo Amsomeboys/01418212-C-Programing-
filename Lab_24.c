@@ -4,16 +4,16 @@ float plus(float A, float B);
 float minus(float A, float B);
 float multiply(float A, float B);
 float divided(float A, float B);
-
+void PrintResult(float result);
 main()
 {
     float A, B, result;
     int choose,print,work=1;
 
 while(work == 1)
-{   
+{
 
- 
+
     printf("Choose Method -> (1)Plus (2)Minus (3)Multiply (4)Divided (5)\"Stop Program\": ");
     scanf("%d", &choose);
 
@@ -49,16 +49,16 @@ while(work == 1)
         default:
             printf("\n\"No Have This Choice\"\n\n");
             print = 0;
-          
-           
-             
+
+
+
     }
         if(print == 1)
         {
-            printf("\nResult is : %.2f\n\n", result);
+           PrintResult(result);
         }
-       
-    
+
+
 
 }
 }
@@ -88,7 +88,7 @@ float divided(float A, float B)
 {
     float result;
     int print=0;
-    if (B == 0) 
+    if (B == 0)
     {
         printf("\n\"Error: Division by zero\"\n\n");
         return print;
@@ -99,4 +99,8 @@ float divided(float A, float B)
         return result ;
     }
     return 0;
+}
+void PrintResult (float result)
+{
+	 printf("\nResult is : %.2f\n\n", result);
 }

@@ -9,6 +9,7 @@ main()
     while(work == 0)
     {
         printf("Enter First Word OR Enter \"/\" to stop program): ");
+
         scanf(" %c",&first);
         work =1;
 

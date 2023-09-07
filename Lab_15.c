@@ -6,15 +6,15 @@ main(){
 	int match =0;
 	int run=1;
 
-while(match == 0&&run == 1)
+	while(match == 0&&run == 1)
     {
-	printf("Enter Postcode OR Enter 0 to stop program: ");
-	scanf("%d",&postCode);
-    while(postCode == 0 && run == 1)
-    {
-        printf("End Program\n\n");
-		run = 0;
-    }
+		printf("Enter Postcode OR Enter 0 to stop program: ");
+		scanf("%d",&postCode);
+    	while(postCode == 0 && run == 1)
+    	{
+        	printf("End Program\n\n");
+			run = 0;
+    	}
 
 		while(postCode == 10120)
 		{
@@ -58,12 +58,11 @@ while(match == 0&&run == 1)
 		}
 
 		while(match == 0 && postCode != 0 && run == 1)
-			{
-				printf("\n\"No Have Infomation For This Post Code\" \n \" Please enter again \"\n\n");
-				postCode = 0;
-				run=1;
-            }
-            match = 0;
-
-}
+		{
+			printf("\n\"No Have Infomation For This Post Code\" \n \" Please enter again \"\n\n");
+			postCode = 0;
+			run=1;
+        }
+    	match = 0;
+	}
 }

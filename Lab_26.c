@@ -17,8 +17,10 @@ void StudentDropLectureClass (int DropStudent) // use Local variable
 }
 
 main() {
-
-    AddStudentLectureClass(12);
-    StudentDropLectureClass(7);
+	int num;
+	printf("Please input number : ");
+	scanf("%d",&num);
+    AddStudentLectureClass(num);
+    StudentDropLectureClass(num);
     printf("Student year 3 = %d\n\n",student);
 }

@@ -10,9 +10,9 @@ main(){
 
     while(run == 0)
     {
-    printf("Please Input Start Number OR Enter 0 to stop program): ");
-    scanf("%d",&start);
-    run++;
+    	printf("Please Input Start Number OR Enter 0 to stop program): ");
+    	scanf("%d",&start);
+    	run++;
 
     while( start == 0 )
     {
@@ -22,8 +22,8 @@ main(){
 
     while(start >= 1 && run == 1)
     {
-    printf("\nPlease Input End Number : ");
-    scanf("%d",&end);
+    	printf("\nPlease Input End Number : ");
+    	scanf("%d",&end);
 
     while(start > end)
     {

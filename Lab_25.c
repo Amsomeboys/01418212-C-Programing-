@@ -28,8 +28,8 @@ main() {
         {
             printf("\"Enter size more than 0\"\n\n");
         }
-       
-       
+
+
 
     }
 }
@@ -37,14 +37,15 @@ main() {
 
 void DrawTop (int size)
 {
-        for (int i = 1; i <= size; i++) 
-        {    
-             for (int j = 1; j <= size; j++) 
+	int i,j,x;
+        for (i = 1; i <= size; i++)
+        {
+             for (j = 1; j <= size; j++)
             {
                 printf(" ");
             }
 
-            for (int x = 1; x <= size; x++) 
+            for (x = 1; x <= size; x++)
             {
                 printf("*");
             }
@@ -54,9 +55,10 @@ void DrawTop (int size)
 
 void DrawMiddle (int size)
 {
-    for (int i = 1; i <= size; i++) 
-        {    
-            for (int x = 1; x <= size*3; x++) 
+	int i,j;
+    for (i = 1; i <= size; i++)
+        {
+            for (j = 1; j <= size*3; j++)
             {
                 printf("*");
             }
@@ -66,14 +68,15 @@ void DrawMiddle (int size)
 
 void DrawBottom (int size)
 {
-        for (int i = 1; i <= size+1; i++) 
-        {    
-             for (int j = 1; j <= size; j++) 
+	int i,j,x;
+        for ( i = 1; i <= size+1; i++)
+        {
+             for (j = 1; j <= size; j++)
             {
                 printf(" ");
             }
 
-            for (int x = 1; x <= size; x++) 
+            for ( x = 1; x <= size; x++)
             {
                 printf("*");
             }
