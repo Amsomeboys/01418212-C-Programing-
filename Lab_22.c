@@ -1,59 +1,78 @@
 #include <stdio.h>
 main()
- {
-
-    float speed ;
-    int finish =0;
-
-while(finish == 0)
 {
-        printf("Please enter Wind Speed (knots) OR Enter -1 to stop program  : ");
-        scanf("%f",&speed);
-    if(speed == -1 )
+
+    float speed = 0;
+    int finish = 0;
+    char con = 'y';
+
+    while (speed == 0 && finish == 0 && con == 'y')
     {
-        printf("\nEnd Program");
-        finish =1;
+        printf("Please enter Wind Speed (knots) : ");
+        scanf("%f", &speed);
+        printf("\n");
+        if (speed < 0)
+        {
+            printf("\"Enter more than or equal 0\"\n");
+        }
 
+        if (speed >= 0 && speed < 1.00 && finish == 0)
+        {
+            printf(" Description : Calm");
+            finish = 1;
+            speed = 0;
+        }
+        if (speed >= 1.00 && speed < 3.5 && finish == 0)
+        {
+            printf("Description : Light Air");
+            finish = 1;
+            speed = 0;
+        }
+        if (speed >= 3.5 && speed < 27.5 && finish == 0)
+        {
+            printf("Description : Breeze");
+            finish = 1;
+            speed = 0;
+        }
+        if (speed >= 27.5 && speed < 47.5 && finish == 0)
+        {
+            printf("Description : Gale");
+            finish = 1;
+            speed = 0;
+        }
+        if (speed >= 47.5 && speed < 63.5 && finish == 0)
+        {
+            printf("Description : Storm");
+            finish = 1;
+            speed = 0;
+        }
+        if (speed >= 63.5 && finish == 0)
+        {
+            printf("Description : Hurricane");
+            finish = 1;
+            speed = 0;
+        }
+        printf("\n\n");
+        while (finish == 1)
+        {
+            printf("Continue Program ?(y/N) :");
+            scanf(" %c", &con);
+            printf("\n");
+            if (con == 'y' || con == 'N')
+            {
+                finish = 0;
+            }
+            else
+            {
+                printf("\"Enter 'y' or 'N' only\"");
+                finish = 1;
+            }
+        }
+        while (con == 'N')
+        {
+            printf("\"End Program\"");
+            break;
+        }
+        speed = 0;
     }
-    printf("\n");
-    if(speed >= 0  && speed <1.00)
-    {
-        printf(" Description : Calm");
-
-
-    }
-    if(speed >= 1.00 && speed < 3.5 )
-    {
-        printf("Description : Light Air");
-
-
-    }
-     if(speed >= 3.5 && speed < 27.5 )
-    {
-        printf("Description : Breeze");
-
-
-    }
-    if (speed >= 27.5 && speed < 47.5 )
-    {
-        printf("Description : Gale");
-
-
-    }
-    if (speed >= 47.5 && speed < 63.5 )
-    {
-        printf("Description : Storm");
-
-
-    }
-      if (speed >= 63.5)
-    {
-        printf("Description : Hurricane");
-
-
-    }
-    printf("\n\n");
-
 }
-
- }
