@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// score = 5
 main()
 {
 
@@ -28,25 +28,25 @@ main()
 				printf("\n\"Summary Result is equal 52\"\n\n");
 				tmp++;
 			}
-			else if(sum < 52)
+			else if (sum < 52)
 			{
 				printf("\n\"Summary Result is not more than 52\" \n\n");
 				tmp++;
 			}
 		}
 
-		while(tmp == 2)
+		while (tmp == 2)
 		{
 			printf("Continue Program ? (y/N): ");
 			scanf(" %c", &con);
-			if(con == 'y' || con == 'N')
+			if (con == 'y' || con == 'N')
 			{
 				tmp = 1;
 			}
 			else
 			{
 				printf("\"Enter 'y' or 'N' only\"");
-				tmp =2;
+				tmp = 2;
 			}
 		}
 		if (con == 'N')
