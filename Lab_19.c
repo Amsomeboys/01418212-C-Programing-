@@ -5,16 +5,15 @@ main()
 
     int start, end, count;
     int i, j, prime = 0;
-    int run = 0;
     char con = 'y';
 
-    while (run == 0 && con == 'y')
+    while (con == 'y')
     {
         printf("Please Input Start Number : ");
         scanf("%d", &start);
         if (start < 1)
         {
-            printf("Enter Input more than 0 \n\n");
+            printf("\"Enter Input more than 0 \"\n\n");
         }
         if (start >= 1)
         {
@@ -53,9 +52,21 @@ main()
                     printf("\"No prime number in this range\"");
                 }
             }
+            while(prime>0)
+			{
+				printf("\n\nContinue Program ? (y/N): ");
+            	scanf(" %c", &con);
+            	if(con == 'y' || con == 'N')
+            	{
+					prime = 0;
+				}
+				else
+				{
+					printf("\"Enter 'y' or 'N' only\"");
+					prime =1;
+				}
+            }
 
-            printf("\n\nContinue Program ? (y/N): ");
-            scanf(" %c", &con);
 
             if (con == 'N')
             {

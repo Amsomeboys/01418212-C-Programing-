@@ -3,7 +3,7 @@
 main()
 {
 
-	int num1 = 0, num2, sum;
+	int num1, num2, sum;
 	int tmp = 1;
 	char con = 'y';
 
@@ -23,22 +23,31 @@ main()
 				printf("\n\"Summary Result is more than 52\"\n\n");
 				tmp++;
 			}
-			if (sum == 52)
+			else if (sum == 52)
 			{
 				printf("\n\"Summary Result is equal 52\"\n\n");
 				tmp++;
 			}
-			else
+			else if(sum < 52)
 			{
 				printf("\n\"Summary Result is not more than 52\" \n\n");
 				tmp++;
 			}
 		}
 
-		if (tmp == 2)
+		while(tmp == 2)
 		{
 			printf("Continue Program ? (y/N): ");
 			scanf(" %c", &con);
+			if(con == 'y' || con == 'N')
+			{
+				tmp = 1;
+			}
+			else
+			{
+				printf("\"Enter 'y' or 'N' only\"");
+				tmp =2;
+			}
 		}
 		if (con == 'N')
 		{
@@ -46,6 +55,5 @@ main()
 			break;
 		}
 		printf("\n");
-		tmp = 1;
 	}
 }

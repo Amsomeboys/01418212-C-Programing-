@@ -6,7 +6,7 @@ main()
     int finish = 0;
     char con = 'y';
 
-    while (speed == 0 && finish == 0 && con == 'y')
+    while (speed == 0 && con == 'y')
     {
         printf("Please enter Wind Speed (knots) : ");
         scanf("%f", &speed);
@@ -64,13 +64,13 @@ main()
             }
             else
             {
-                printf("\"Enter 'y' or 'N' only\"");
+                printf("\"Enter 'y' or 'N' only\"\n\n");
                 finish = 1;
             }
         }
         while (con == 'N')
         {
-            printf("\"End Program\"");
+            printf("\"End Program\"\n\n");
             break;
         }
         speed = 0;

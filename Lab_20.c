@@ -6,7 +6,7 @@ main()
     int work = 0;
     char con = 'y';
 
-    while (work == 0 && con == 'y')
+    while (con == 'y')
     {
         first = '0';
         second = '0';
@@ -49,7 +49,7 @@ main()
                 scanf(" %c", &fourth);
                 if (fourth < 'A')
                 {
-                    printf("\"Enter only character\"\n\n");
+                    printf("\"Enter only character\"\n");
                 }
             }
 
@@ -59,7 +59,7 @@ main()
                 scanf(" %c", &fifth);
                 if (fifth < 'A')
                 {
-                    printf("\"Enter only character\"\n\n");
+                    printf("\"Enter only character\"\n");
                 }
             }
 
@@ -88,15 +88,23 @@ main()
                 fifth = blank;
             }
 
-            printf("\n \"result : %c %c %c %c %c\"", first, second, third, fourth, fifth);
-            printf("\n\n");
+            printf("\n\n \"result : %c %c %c %c %c\"", first, second, third, fourth, fifth);
+            printf("\n");
             work = 1;
         }
         while (work == 1)
         {
             printf("\n\nContinue Program ? (y/N): ");
             scanf(" %c", &con);
-            work = 0;
+            if(con == 'y' || con == 'N')
+			{
+				work = 0;
+			}
+			else
+			{
+				printf("\"Enter 'y' or 'N' only\"");
+				work =1;
+			}
         }
 
         if (con == 'N')
@@ -104,5 +112,6 @@ main()
             printf("\n\"End Program\"\n\n");
             break;
         }
+        printf("\n");
     }
 }

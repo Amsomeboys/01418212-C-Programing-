@@ -4,8 +4,6 @@ main()
 {
 
 	int postCode = 1;
-	int match = 0;
-
 	char con = 'y';
 
 	while (con == 'y')
