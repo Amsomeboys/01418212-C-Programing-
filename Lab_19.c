@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// score = 5
 main()
 {
 
@@ -52,21 +52,20 @@ main()
                     printf("\"No prime number in this range\"");
                 }
             }
-            while(prime>0)
-			{
-				printf("\n\nContinue Program ? (y/N): ");
-            	scanf(" %c", &con);
-            	if(con == 'y' || con == 'N')
-            	{
-					prime = 0;
-				}
-				else
-				{
-					printf("\"Enter 'y' or 'N' only\"");
-					prime =1;
-				}
+            while (prime > 0)
+            {
+                printf("\n\nContinue Program ? (y/N): ");
+                scanf(" %c", &con);
+                if (con == 'y' || con == 'N')
+                {
+                    prime = 0;
+                }
+                else
+                {
+                    printf("\"Enter 'y' or 'N' only\"");
+                    prime = 1;
+                }
             }
-
 
             if (con == 'N')
             {

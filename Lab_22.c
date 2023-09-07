@@ -1,4 +1,5 @@
 #include <stdio.h>
+// score = 5
 main()
 {
 

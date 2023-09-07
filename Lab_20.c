@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// score = 5
 main()
 {
     char first, second, third, fourth, fifth, blank;
@@ -96,15 +96,15 @@ main()
         {
             printf("\n\nContinue Program ? (y/N): ");
             scanf(" %c", &con);
-            if(con == 'y' || con == 'N')
-			{
-				work = 0;
-			}
-			else
-			{
-				printf("\"Enter 'y' or 'N' only\"");
-				work =1;
-			}
+            if (con == 'y' || con == 'N')
+            {
+                work = 0;
+            }
+            else
+            {
+                printf("\"Enter 'y' or 'N' only\"");
+                work = 1;
+            }
         }
 
         if (con == 'N')
