@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// score = 5
 main()
 {
 	int start = 0, end, count;

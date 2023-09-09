@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// score = 3
 main()
 {
 
@@ -7,31 +7,30 @@ main()
 	int tmp = 1;
 	char con = 'y';
 
-	while (tmp == 1 && con == 'y')
+	while (con == 'y')
 	{
 		printf("Enter first number:");
 		scanf("%d", &num1);
-		tmp++;
 
-		while (con != 'N' && tmp == 2)
+		while (con == 'y' && tmp == 1)
 		{
 			printf("Enter second number :");
 			scanf("%d", &num2);
 			sum = num1 + num2;
 
-			while (tmp <= 2 && sum >= 52)
+			while (tmp == 1 && sum >= 52)
 			{
 				printf("\n\"Summary Result is more than 52\"\n\n");
 				tmp++;
 			}
-			while (tmp <= 2 && sum < 52)
+			while (tmp == 1 && sum < 52)
 			{
 				printf("\n\"Summary Result is not more than 52\" \n\n");
 				tmp++;
 			}
 		}
 
-		while (tmp == 3)
+		while (tmp == 2)
 		{
 			printf("Continue Program ? (y/N):");
 			scanf(" %c", &con);
@@ -42,5 +41,6 @@ main()
 			printf("\n\"End Program\"\n\n");
 			break;
 		}
+		printf("\n");
 	}
 }

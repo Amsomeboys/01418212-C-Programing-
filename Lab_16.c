@@ -1,4 +1,5 @@
 #include <stdio.h>
+// score = 3
 main()
 {
 
@@ -6,20 +7,20 @@ main()
     int finish = 0;
     char con = 'y';
 
-    while (speed == 0 && finish == 0 && con == 'y')
+    while (con == 'y')
     {
         printf("Please enter Wind Speed (knots) : ");
         scanf("%f", &speed);
         printf("\n");
         while (speed < 0)
         {
-            printf("\"Enter more than or equal 0\"\n\n");
+            printf("\"Enter more than or equal 0\"\n");
             speed = 0;
             finish = 1;
         }
         while (speed >= 0 && finish == 0)
         {
-            while (speed < 1.00 && finish == 0)
+            while (speed >= 0 && speed < 1.00 && finish == 0)
             {
                 printf(" Description : Calm");
                 finish = 1;
@@ -70,5 +71,6 @@ main()
             }
         }
         finish = 0;
+        printf("\n\n");
     }
 }

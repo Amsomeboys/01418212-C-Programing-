@@ -7,7 +7,7 @@ main()
     int finish = 0;
     char con = 'y';
 
-    while (speed == 0 && con == 'y')
+    while (con == 'y')
     {
         printf("Please enter Wind Speed (knots) : ");
         scanf("%f", &speed);
