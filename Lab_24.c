@@ -1,20 +1,24 @@
 #include <stdio.h>
 
-float plus(float A, float B);
-float minus(float A, float B);
-float multiply(float A, float B);
-float divided(float A, float B);
-int modulo(int A, int B);
+void plus(float A, float B);
+void minus(float A, float B);
+void multiply(float A, float B);
+void divided(float A, float B);
+void mod(int A, int B);
 void PrintResult(float result);
+void PrintResultInt(int result);
+
 main()
 {
-    float fn1, fn2, num1, num2, result;
-    int choose, print, work = 1;
+    float fn1, fn2,  result;
+    int num1,num2;
+    int choose, work = 1, out = 'y';
 
-    while (work == 1)
+    while (out == 'y')
     {
-
-        printf("Choose Method ->\n (1)Plus\n (2)Minus\n (3)Multiply\n (4)Divided\n (5)Modula\n(6)\"Stop Program\": ");
+		work=1;
+        printf("Choose Method ->\n (1)Plus\n (2)Minus\n (3)Multiply\n (4)Divided\n (5)Mod\n");
+        printf("\nSelect -> : ");
         scanf("%d", &choose);
 
         if (choose >= 1 && choose <= 4)
@@ -35,83 +39,97 @@ main()
         switch (choose)
         {
         case 1:
-            result = plus(fn1, fn2);
-            print = 1;
+            plus(fn1, fn2);
+
             break;
         case 2:
-            result = minus(fn1, fn2);
-            print = 1;
+          	minus(fn1, fn2);
+
             break;
         case 3:
-            result = multiply(fn1, fn2);
-            print = 1;
+            multiply(fn1, fn2);
+
             break;
         case 4:
-            result = divided(fn1, fn2);
+            divided(fn1, fn2);
             break;
         case 5:
-            result = modulo(num1, num2);
+            mod(num1, num2);
             break;
         case 6:
             printf("\"End Program\"\n\n");
-            work = 0;
-            print = 0;
+
             break;
         default:
             printf("\n\"No Have This Choice\"\n\n");
-            print = 0;
         }
-        if (print == 1)
+        while (work == 1)
         {
-            PrintResult(result);
+            printf("Continue Program ? (y/N) : ");
+            scanf(" %c", &out);
+            if(out == 'y' || out == 'N')
+            {
+                work = 0;
+            }
+            else
+            {
+                printf("Enter only \"y\" or \"N\"");
+            }
         }
+        if (out == 'N')
+        {
+            printf("\"End Program\"");
+            work = 0;
+        }
+        printf("\n");
     }
 }
 
-float plus(float A, float B)
+void plus(float A, float B)
 {
     float result;
     result = A + B;
-    return result;
+    PrintResult(result);
 }
 
-float minus(float A, float B)
+void minus(float A, float B)
 {
     float result;
     result = A - B;
-    return result;
+    PrintResult(result);
 }
 
-float multiply(float A, float B)
+void multiply(float A, float B)
 {
     float result;
     result = A * B;
-    return result;
+    PrintResult(result);
 }
 
-float divided(float A, float B)
+void divided(float A, float B)
 {
     float result;
-    int print = 0;
     if (B == 0)
     {
         printf("\n\"Error: Division by zero\"\n\n");
-        return print = 2;
     }
     else
     {
         result = A / B;
-        return result;
+        PrintResult(result);
     }
 }
-int modulo(int A, int B)
+void mod(int A, int B)
 {
-    int result;
-    result = A % B;
-    return result;
+	int result;
+	result = A % B;
+    PrintResultInt(result);
 }
 void PrintResult(float result)
 {
-
-    printf("\nResult is : %.2f\n\n", result);
+	printf("\nResult is : %.2f\n\n", result);
+}
+void PrintResultInt(int result)
+{
+	printf("\nResult is : %d\n\n", result);
 }

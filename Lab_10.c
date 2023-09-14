@@ -1,201 +1,189 @@
 #include <stdio.h>
 
-char ch1='i',ch2='l',ch3='o',ch4='v',ch5='e',ch6='c',ch7='p',ch8='r',ch9='o',ch10='g',ch11='r',ch12='a',ch13='m';
-int match;
-int Compareword(char in );
-
 main()
 {
-    char in1,in2,in3,in4,in5,in6,in7,in8;
-    int len,run=1;
+    char ch1, ch2, ch3, ch4, ch5, ch6, out = 'y';
+    int match;
+    char in1, in2, in3, in4, in5, in6;
+    int len1, len2, run = 0;
 
-while(run == 1)
-{
-    printf("Please enter word size (maximum 8) or \"-1\" to stop program: ");
-    scanf("%d",&len);
-
-    if(len == -1)
+    while (out == 'y')
     {
-        printf("\"End Program\"\n");
-        run = 0;
-    }
-     if(run != 0)
-    {
-    printf("Please enter word : ");
-    if(len == 1)
-    {
-        scanf(" %c",&in1);
-        Compareword(in1);
-        if(match == 1)
+        len1 = 0;
+        len2 = 0;
+        while (len1 <= 0)
         {
-            printf("%c was found in text",in1);
-        }
-
-    }
-    else  if(len == 2)
-    {
-        scanf(" %c %c",&in1,&in2);
-        Compareword(in1);
-        Compareword(in2);
-        if(match == 2)
-        {
-            printf("%c%c was found in text",in1,in2);
-        }
-    }
-    else  if(len == 3)
-    {
-        scanf(" %c %c %c",&in1,&in2,&in3);
-        Compareword(in1);
-        Compareword(in2);
-        Compareword(in3);
-        if(match == 3)
-        {
-            printf("%c%c%c was found in text",in1,in2,in3);
-        }
-    }
-     else  if(len == 4)
-    {
-        scanf(" %c %c %c %c",&in1,&in2,&in3,&in4);
-        Compareword(in1);
-        Compareword(in2);
-        Compareword(in3);
-        Compareword(in4);
-        if(match == 4)
-        {
-            printf("%c%c%c%c was found in text",in1,in2,in3,in4);
-        }
-    }
-     else  if(len == 5)
-    {
-        scanf(" %c %c %c %c %c",&in1,&in2,&in3,&in4,&in5);
-        Compareword(in1);
-        Compareword(in2);
-        Compareword(in3);
-        Compareword(in4);
-        Compareword(in5);
-        if(match == 5)
-        {
-            printf("%c%c%c%c%c was found in text",in1,in2,in3,in4,in5);
-        }
-    }
-      else if(len == 6)
-    {
-        scanf(" %c %c %c %c %c %c",&in1,&in2,&in3,&in4,&in5,&in6);
-        Compareword(in1);
-        Compareword(in2);
-        Compareword(in3);
-        Compareword(in4);
-        Compareword(in5);
-        Compareword(in6);
-         if(match == 6)
-        {
-            printf("%c%c%c%c%c%c was found in text",in1,in2,in3,in4,in5,in6);
-        }
-    }
-      else if(len == 7)
-    {
-        scanf(" %c %c %c %c %c %c %c",&in1,&in2,&in3,&in4,&in5,&in6,&in7);
-        Compareword(in1);
-        Compareword(in2);
-        Compareword(in3);
-        Compareword(in4);
-        Compareword(in5);
-        Compareword(in6);
-        Compareword(in7);
-         if(match == 7)
-        {
-            printf("%c%c%c%c%c%c%c was found in text",in1,in2,in3,in4,in5,in6,in7);
-        }
-    }
-      else if(len == 8)
-    {
-        scanf(" %c %c %c %c %c %c %c %c",&in1,&in2,&in3,&in4,&in5,&in6,&in7,&in8);
-        Compareword(in1);
-        Compareword(in2);
-        Compareword(in3);
-        Compareword(in4);
-        Compareword(in5);
-        Compareword(in6);
-        Compareword(in7);
-        Compareword(in8);
-         if(match == 8)
-        {
-            printf("%c%c%c%c%c%c%c%c was found in text",in1,in2,in3,in4,in5,in6,in7,in8);
-        }
-    }
-    else
-    {
-        printf("Enter word size again");
-    }
-    }
-}
-}
-
-int Compareword(char in )
-{
-        if(in == ch1)
-        {
-        printf("\nword \"%c\" found in text ",in);
-        match++;
-        }
-        else if(in == ch2)
-         {
-        printf("\nword \"%c\" found in text ",in);
-        match++;
-        }
-        else if(in == ch3)
-        {
-        printf("\nword \"%c\" found in text ",in);
-        match++;
-        }
-        else if(in == ch4)
-         {
-        printf("\nword \"%c\" found in text ",in);
-        match++;
+            printf("\nUser 1 : Please enter word size (maximum 6): ");
+            scanf("%d", &len1);
+            if (len1 < 0 || len1 > 6)
+            {
+                printf("\nEnter number in range 0 - 6 !!!");
+                len1 = 0;
+            }
+            else
+            {
+                printf("\nUser 1 : Please enter word : ");
+                if (len1 == 1)
+                {
+                    scanf(" %c", &ch1);
+                }
+                else if (len1 == 2)
+                {
+                    scanf(" %c%c", &ch1, &ch2);
+                }
+                else if (len1 == 3)
+                {
+                    scanf(" %c%c%c", &ch1, &ch2, &ch3);
+                }
+                else if (len1 == 4)
+                {
+                    scanf(" %c%c%c%c", &ch1, &ch2, &ch3, &ch4);
+                }
+                else if (len1 == 5)
+                {
+                    scanf(" %c%c%c%c%c", &ch1, &ch2, &ch3, &ch4, &ch5);
+                }
+                else if (len1 == 6)
+                {
+                    scanf(" %c%c%c%c%c%c", &ch1, &ch2, &ch3, &ch4, &ch5, &ch6);
+                }
+				run = 1;
+            }
         }
 
-        else if(in == ch6)
+        while (run == 1 && len2 == 0)
         {
-        printf("\nword \"%c\" found in text ",in);
-        match++;
+            printf("\nUser 2 : Please enter word size (maximum 6): ");
+            scanf(" %d", &len2);
+
+            if (len2 >= 1 && len2 <= 6)
+            {
+                printf("\nUser 2 : Please enter word want to search : ");
+                if (len2 == 1)
+                {
+                    scanf(" %c", &in1);
+                    if (in1 == ch1)
+                    {
+                        printf("\nword \"%c\" found in text ", in1);
+                        match = 1;
+                    }
+                    else
+                    {
+                        printf("%c was not found in text", in1);
+                        match = 0;
+                    }
+                }
+                else if (len2 == 2)
+                {
+                    scanf(" %c%c", &in1, &in2);
+                    if (in1 == ch1 && in2 == ch2)
+                    {
+                        printf("\nword \"%c%c\" found in text ", in1, in2);
+                        match = 1;
+                    }
+                    else
+                    {
+                        printf("%c%c was not found in text", in1, in2);
+                        match = 0;
+                    }
+                }
+                else if (len2 == 3)
+                {
+                    scanf(" %c%c%c", &in1, &in2, &in3);
+                    if (in1 == ch1 && in2 == ch2 && in3 == ch3)
+                    {
+                        printf("\nword \"%c%c%c\" found in text ", in1, in2, in3);
+                        match = 1;
+                    }
+                    else
+                    {
+                        printf("%c%c%c was not found in text", in1, in2, in3);
+                        match = 0;
+                    }
+                }
+                else if (len2 == 4)
+                {
+                    scanf(" %c%c%c%c", &in1, &in2, &in3, &in4);
+                    if (in1 == ch1 && in2 == ch2 && in3 == ch3 && in4 == ch4)
+                    {
+                        if (in1 == in3 && in2 == in4)
+                        {
+                            printf("\nword \"%c%c\" found two times in text ", in1, in2);
+                        }
+                        else
+                            printf("\nword \"%c%c%c%c\" found in text ", in1, in2, in3, in4);
+                        match = 1;
+                    }
+                    else
+                    {
+                        printf("%c%c%c%c was not found in text", in1, in2, in3, in4);
+                        match = 0;
+                    }
+                }
+                else if (len2 == 5)
+                {
+                    scanf(" %c%c%c%c%c", &in1, &in2, &in3, &in4, &in5);
+                    if (in1 == ch1 && in2 == ch2 && in3 == ch3 && in4 == ch4 && in5 == ch5)
+                    {
+                        if (in1 == in3 && in2 == in4)
+                        {
+                            printf("\nword \"%c%c\" found two times in text ", in1, in2);
+                        }
+                        else
+                            printf("\nword \"%c%c%c%c%c\" found in text ", in1, in2, in3, in4, in5);
+                        match = 1;
+                    }
+                    else
+                    {
+                        printf("%c%c%c%c%c was not found in text", in1, in2, in3, in4, in5);
+                        match = 0;
+                    }
+                }
+                else if (len2 == 6)
+                {
+                    scanf(" %c%c%c%c%c%c", &in1, &in2, &in3, &in4, &in5, &in6);
+                    if (in1 == ch1 && in2 == ch2 && in3 == ch3 && in4 == ch4 && in5 == ch5 && in6 == ch6)
+                    {
+                        if (in1 == in3 && in2 == in4 && in1 == in5 && in2 == ch6)
+                        {
+                            printf("\nword \"%c%c\" found three times in text ", in1, in2);
+                        }
+                        else
+                            printf("\nword \"%c%c%c%c%c%c\" found in text ", in1, in2, in3, in4, in5, in6);
+                        match = 1;
+                    }
+                    else
+                    {
+                        printf("%c%c%c%c%c%c was not found in text", in1, in2, in3, in4, in5, in6);
+                        match = 0;
+                    }
+                }
+                run = 0;
+            }
+            else
+            {
+                printf("Enter number in range 0 - 6 !!!");
+            }
         }
-        else if(in == ch7)
-         {
-        printf("\nword \"%c\" found in text ",in);
-        match++;
-        }
-        else if(in == ch8)
+        while (run == 0)
         {
-        printf("\nword \"%c\" found in text ",in);
-        match++;
+            printf("\n\nContinue Program ? (y/N) : ");
+            scanf(" %c", &out);
+            if (out == 'y' || out == 'N')
+            {
+                run = 1;
+            }
+            else
+            {
+                printf("Enter only \" y \" or \"N\"");
+            }
         }
-        else if(in == ch9)
-         {
-        printf("\nword \"%c\" found in text ",in);
-        match++;
+        if (out == 'N')
+        {
+            printf("\"End Program\"");
         }
-        else if(in == ch10)
-         {
-        printf("\nword \"%c\" found in text ",in);
-        match++;
-        }
-        else if(in == ch11)
-         {
-        printf("\nword \"%c\" found in text ",in);
-        match++;
-        }
-        else if(in == ch12)
-         {
-        printf("\nword \"%c\" found in text ",in);
-        match++;
-        }
-        else if(in == ch13)
-         {
-        printf("\nword \"%c\" found in text ",in);
-        match++;
-        }
-        else
-        printf("word \"%c\" Not found ",in);
-        printf("\n\n");
-    return match;
+    }
+    len2 = 0;
+    run = 0;
+    printf("\n");
 }

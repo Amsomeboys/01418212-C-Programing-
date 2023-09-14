@@ -1,12 +1,11 @@
 #include <stdio.h>
 
-// editing yet
 main()
 {
     char flight, tf, con = 'y';
     float time;
     int next = 0;
-    int error = 1;
+
 
     while (con == 'y')
     {

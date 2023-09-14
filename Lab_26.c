@@ -1,19 +1,12 @@
 #include <stdio.h>
-#include <string.h>
 
-int student = 50; // Global variable
+int allStudent = 60; // Global variable
 
-void AddStudentLectureClass(int AddStudent) // use Global variable
+void StudentInLectureClass(int PresentStudent) // use Local variable
 {
-    student = student + AddStudent;
-    printf("Student in Lecture Class = %d\n\n", student);
-}
-
-void StudentDropLectureClass(int DropStudent) // use Local variable
-{
-    int student = 30;
-    student = student - DropStudent;
-    printf("Student Drop Lecture Class = %d\n\n", student);
+    int allStudent = 0;
+    allStudent = allStudent + PresentStudent;
+    printf("Student in Lecture Class = %d\n\n", allStudent);
 }
 
 main()
@@ -21,7 +14,6 @@ main()
     int num;
     printf("Please input number : ");
     scanf("%d", &num);
-    AddStudentLectureClass(num);
-    StudentDropLectureClass(num);
-    printf("Student year 3 = %d\n\n", student);
+   	printf("\nStudent year 3 = %d\n\n",allStudent);
+    StudentInLectureClass(num);
 }
