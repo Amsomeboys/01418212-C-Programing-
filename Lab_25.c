@@ -21,7 +21,7 @@ main()
         }
         else if (size == -1)
         {
-            printf("\n\"End Progran\"\n");
+            printf("\n\"End Program\"\n");
             draw = 0;
         }
         else
