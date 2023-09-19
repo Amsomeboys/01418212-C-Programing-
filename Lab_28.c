@@ -2,20 +2,35 @@
 
 main()
 {
-    int Array2D[10][10], Array3D[10][10][10], i, j, k, size, select, run;
+    int Array2D[10][10], Array3D[10][10][10], i, j, k, size = 0, select, run;
     char finish = 'y';
     while (finish == 'y')
     {
-        printf("Array2D Enter (1) / Array3D Enter (2) : ");
-        scanf("%d", &select);
+        while (select != 1 && select != 2)
+        {
+            printf("Array2D Enter (1) / Array3D Enter (2) : ");
+            scanf("%d", &select);
+            if (select != 1 && select != 2)
+            {
+                printf("Enter only \"1\" or \"2\"\n\n");
+            }
+        }
+
         switch (select)
         {
         case 1:
 
             while (size <= 0)
             {
-                printf("Please input Array size : ");
-                scanf("%d", &size);
+                while (size == 0 || size > 10)
+                {
+                    printf("Please input Array size (maximum = 10): ");
+                    scanf("%d", &size);
+                    if (size == 0 || size > 10)
+                    {
+                        printf("Array maximum = 10\n\n");
+                    }
+                }
                 for (i = 0; i < size; i++)
                 {
                     for (j = 0; j < size; j++)
@@ -34,8 +49,15 @@ main()
         case 2:
             while (size <= 0)
             {
-                printf("Please input Array size : ");
-                scanf("%d", &size);
+                while (size == 0 || size > 10)
+                {
+                    printf("Please input Array size (maximum = 10): ");
+                    scanf("%d", &size);
+                    if (size == 0 || size > 10)
+                    {
+                        printf("\"Array maximum = 10\"\n\n");
+                    }
+                }
                 for (i = 0; i < size; i++)
                 {
                     for (j = 0; j < size; j++)
@@ -60,11 +82,13 @@ main()
         }
         while (run == 1)
         {
-            printf("\n\nContinue Program ? (y/N) : ");
+            printf("\nContinue Program ? (y/N) : ");
             scanf(" %c", &finish);
             if (finish == 'y' || finish == 'N')
             {
                 run = 0;
+                select = 0;
+                size = 0;
             }
             else
             {
@@ -75,5 +99,6 @@ main()
         {
             printf("\"End Program\"");
         }
+        printf("\n");
     }
 }

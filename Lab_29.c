@@ -2,7 +2,7 @@
 
 main()
 {
-    int first1D[10], second1D[10], third1D[10], i, size = 5;
+    int first1D[10], second1D[10], third1D[10], i, size = 10;
 
     for (i = 0; i < size; i++)
     {
@@ -10,14 +10,16 @@ main()
         second1D[i] = 0;
     }
 
-    printf("Enter number in first array (10) :");
+    printf("Enter number in first array (10 number)");
     for (i = 0; i < size; i++)
     {
+        printf("\nFirst[%d] : ", i);
         scanf("%d", &first1D[i]);
     }
-    printf("Enter number in second array (10) :");
+    printf("Enter number in second array (10 number)");
     for (i = 0; i < size; i++)
     {
+        printf("\nSecond[%d] : ", i);
         scanf("%d", &second1D[i]);
     }
 

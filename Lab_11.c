@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <math.h>
 
 main()
 {
     int direction = 0, distance = 0, x = 0, y = 0, press = 0, tmp = 0;
+    float displacement = 0.00, xpow = 0.00, ypow = 0.00;
     char finish = 'y';
 
     while (finish == 'y' && press <= 5)
@@ -104,7 +106,13 @@ main()
 
         if (finish == 'N')
         {
-            printf("\"press = %d\"\n\n", tmp);
+            xpow = x;
+            x = 0;
+            ypow = y;
+            y = 0;
+            displacement = sqrt(pow(xpow - x, 2) + pow(ypow - y, 2));
+            printf("\"Total Distance = %d\"\n\n", tmp);
+            printf("\"Displacement Distance = %.2f\"\n\n", displacement);
             printf("\"End Program\"");
         }
     }
