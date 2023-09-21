@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
+// score = 5
 main()
 {
     int direction = 0, distance = 0, x = 0, y = 0, press = 0, tmp = 0;

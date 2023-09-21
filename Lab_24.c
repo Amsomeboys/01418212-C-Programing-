@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// score = 5
+
 void plus(float A, float B);
 void minus(float A, float B);
 void multiply(float A, float B);
@@ -21,6 +23,27 @@ main()
         printf("\nSelect -> : ");
         scanf("%d", &choose);
 
+       	if(choose == 1)
+       	{
+			printf("\n\"Plus number\"\n");
+		}
+		else if(choose ==2)
+		{
+			printf("\n\"Minus number\"\n");
+		}
+		else if(choose == 3)
+		{
+			printf("\n\"Multiply number\"\n");
+		}
+		else if(choose == 4)
+		{
+			printf("\n\"Divided number\"\n");
+		}
+		else if(choose == 5)
+		{
+			printf("\n\"Mod number\"\n");
+		}
+
         if (choose >= 1 && choose <= 4)
         {
             printf("\nPlease Input First Number: ");
@@ -30,9 +53,9 @@ main()
         }
         if (choose == 5)
         {
-            printf("\nPlease Input First Number (Integer): ");
+            printf("\nPlease Input First Number : ");
             scanf("%d", &num1);
-            printf("\nPlease Input Second Number (Integer): ");
+            printf("\nPlease Input Second Number : ");
             scanf("%d", &num2);
         }
 
@@ -56,10 +79,6 @@ main()
         case 5:
             mod(num1, num2);
             break;
-        case 6:
-            printf("\"End Program\"\n\n");
-
-            break;
         default:
             printf("\n\"No Have This Choice\"\n\n");
         }
@@ -73,7 +92,7 @@ main()
             }
             else
             {
-                printf("Enter only \"y\" or \"N\"");
+                printf("\nEnter only \"y\" or \"N\"\n");
             }
         }
         if (out == 'N')

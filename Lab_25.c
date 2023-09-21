@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// score = 5
+
 void DrawTop(int size);
 void DrawMiddle(int size);
 void DrawBottom(int size);
@@ -8,26 +10,47 @@ main()
 {
 
     int draw = 1;
-    int size;
-    while (draw == 1)
+    int size=0;
+    int run = 0;
+    char finish = 'y';
+    while (finish == 'y')
     {
-        printf("Enter the size of the crucifix (enter -1 to stop program): ");
+		run = 0;
+		while(size<=0)
+		{
+        printf("Enter the size of the crucifix : ");
         scanf("%d", &size);
+		}
+
         if (size > 0)
         {
             DrawTop(size);
             DrawMiddle(size);
             DrawBottom(size);
         }
-        else if (size == -1)
-        {
-            printf("\n\"End Program\"\n");
-            draw = 0;
-        }
         else
         {
             printf("\"Enter size more than 0\"\n\n");
         }
+        while (run == 0)
+		{
+		     printf("\n\nContinue Program ? (y/N) : ");
+		     scanf(" %c", &finish);
+		     if (finish == 'y' || finish == 'N')
+		     {
+		        run = 1;
+		        size = 0;
+		      }
+		      else
+		      {
+		         printf("Enter only \" y \" or \"N\"");
+		      }
+		 }
+		 if (finish == 'N')
+		 {
+		     printf("\"End Program\"");
+         }
+    	printf("\n");
     }
 }
 

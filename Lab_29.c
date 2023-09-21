@@ -31,10 +31,12 @@ main()
         {
             third1D[i] = first1D[i] + second1D[i];
         }
-        printf("\nSum Array Result is : ");
+        printf("\nSum Array Result is  \n");
         for (i = 0; i < size; i++)
         {
+			printf("\nSumArr[%d] : ", i);
             printf(" %.2f ", third1D[i]);
+            printf("\n");
         }
 
         while (run == 0)
@@ -52,7 +54,7 @@ main()
         }
         if (finish == 'N')
         {
-            printf("\"End Program\"");
+            printf("\"End Program\"\n\n");
         }
     }
 }
