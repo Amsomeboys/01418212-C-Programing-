@@ -3,7 +3,7 @@
 main()
 {
     float one2D[5][5], two2D[5][5], three2D[5][5], sum = 0, avg = 0;
-    int size, i, j, run = 0;
+    int w_size=0,h_size=0,d_size=0, i, j, run = 0;
     char finish = 'y';
 
     while (finish == 'y')

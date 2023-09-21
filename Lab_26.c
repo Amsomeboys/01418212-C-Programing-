@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int allStudent = 60; // Global variable
 void StudentInLectureClass(int PresentStudent);
+int allStudent = 60; // Global variable
 
 main()
 {
