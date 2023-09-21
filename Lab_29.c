@@ -2,7 +2,8 @@
 
 main()
 {
-    int first1D[10], second1D[10], third1D[10], i, size = 10, run = 0;
+    float first1D[10], second1D[10], third1D[10];
+    int i, size = 10, run = 0;
     char finish = 'y';
 
     while (finish == 'y')
@@ -17,23 +18,23 @@ main()
         for (i = 0; i < size; i++)
         {
             printf("\nFirst[%d] : ", i);
-            scanf("%d", &first1D[i]);
+            scanf("%f", &first1D[i]);
         }
         printf("Enter number in second array (10 number)");
         for (i = 0; i < size; i++)
         {
             printf("\nSecond[%d] : ", i);
-            scanf("%d", &second1D[i]);
+            scanf("%f", &second1D[i]);
         }
 
         for (i = 0; i < size; i++)
         {
             third1D[i] = first1D[i] + second1D[i];
         }
-        printf("Sum Array Result is : ");
+        printf("\nSum Array Result is : ");
         for (i = 0; i < size; i++)
         {
-            printf(" %d ", third1D[i]);
+            printf(" %.2f ", third1D[i]);
         }
 
         while (run == 0)

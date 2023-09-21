@@ -2,7 +2,7 @@
 
 main()
 {
-    float one2D[5][5], two2D[5][5], three2D[5][5];
+    float one2D[5][5], two2D[5][5], three2D[5][5], sum = 0, avg = 0;
     int size, i, j, run = 0;
     char finish = 'y';
 
@@ -26,11 +26,9 @@ main()
         {
             for (j = 0; j < size; j++)
             {
-                while (one2D[i][j] > 0)
-                {
-                    printf("First[%d][%d] : ", i, j);
-                    scanf("%f", &one2D[i][j]);
-                }
+
+                printf("First[%d][%d] : ", i, j);
+                scanf("%f", &one2D[i][j]);
             }
         }
 
@@ -48,7 +46,8 @@ main()
         {
             for (j = 0; j < size; j++)
             {
-                three2D[i][j] = (one2D[i][j] * two2D[i][j]) / 2;
+                three2D[i][j] = one2D[i][j] * two2D[i][j];
+                printf("\nThree[%d][%d] : %.2f", i, j, three2D[i][j]);
             }
         }
 
@@ -56,9 +55,11 @@ main()
         {
             for (j = 0; j < size; j++)
             {
-                printf("Average value between array at [%d][%d] is %.1f\n", i, j, three2D[i][j]);
+                sum += three2D[i][j];
             }
         }
+        avg = sum / (size * size);
+        printf("\n\nAverage of multipy value in array is = %.2f ", avg);
         run = 1;
         while (run == 1)
         {
