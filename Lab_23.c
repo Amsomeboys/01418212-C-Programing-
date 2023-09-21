@@ -1,11 +1,10 @@
 #include <stdio.h>
-
+// score = 5
 main()
 {
     char flight, tf, con = 'y';
     float time;
     int next = 0;
-
 
     while (con == 'y')
     {

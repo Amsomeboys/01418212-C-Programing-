@@ -86,7 +86,7 @@ main()
                     }
                     else
                     {
-                        printf("%c was not found in text", in1);
+                        printf("\n\"%c\" was not found in text", in1);
                     }
                 }
                 else if (len2 == 2)
@@ -100,7 +100,7 @@ main()
                         }
                         else
                         {
-                            printf("%c%c was not found in text", in1, in2);
+                            printf("\n\"%c%c\" was not found in text", in1, in2);
                         }
                     }
                     else if (in1 == ch2)
@@ -111,7 +111,7 @@ main()
                         }
                         else
                         {
-                            printf("%c%c was not found in text", in1, in2);
+                            printf("\n\"%c%c\" was not found in text", in1, in2);
                         }
                     }
                     else if (in1 == ch3)
@@ -122,7 +122,7 @@ main()
                         }
                         else
                         {
-                            printf("%c%c was not found in text", in1, in2);
+                            printf("\n\"%c%c\" was not found in text", in1, in2);
                         }
                     }
                     else if (in1 == ch4)
@@ -133,7 +133,7 @@ main()
                         }
                         else
                         {
-                            printf("%c%c was not found in text", in1, in2);
+                            printf("\n\"%c%c\" was not found in text", in1, in2);
                         }
                     }
                     else if (in1 == ch5)
@@ -144,12 +144,12 @@ main()
                         }
                         else
                         {
-                            printf("%c%c was not found in text", in1, in2);
+                            printf("\n\"%c%c\" was not found in text", in1, in2);
                         }
                     }
                     else
                     {
-                        printf("%c%c was not found in text", in1, in2);
+                        printf("\n\"%c%c\" was not found in text", in1, in2);
                     }
                 }
                 else if (len2 == 3)
@@ -163,7 +163,7 @@ main()
                         }
                         else
                         {
-                            printf("%c%c%c was not found in text", in1, in2, in3);
+                            printf("\n\"%c%c%c\" was not found in text", in1, in2, in3);
                         }
                     }
                     else if (in1 == ch2)
@@ -174,7 +174,7 @@ main()
                         }
                         else
                         {
-                            printf("%c%c%c was not found in text", in1, in2, in3);
+                            printf("\n\"%c%c%c\n was not found in text", in1, in2, in3);
                         }
                     }
                     else if (in1 == ch3)
@@ -185,7 +185,7 @@ main()
                         }
                         else
                         {
-                            printf("%c%c%c was not found in text", in1, in2, in3);
+                            printf("\n\"%c%c%c\" was not found in text", in1, in2, in3);
                         }
                     }
                     else if (in1 == ch4)
@@ -196,12 +196,12 @@ main()
                         }
                         else
                         {
-                            printf("%c%c%c was not found in text", in1, in2, in3);
+                            printf("\n\"%c%c%c\" was not found in text", in1, in2, in3);
                         }
                     }
                     else
                     {
-                        printf("%c%c%c was not found in text", in1, in2, in3);
+                        printf("\n\"%c%c%c\" was not found in text", in1, in2, in3);
                     }
                 }
                 else if (len2 == 4)
@@ -215,7 +215,7 @@ main()
                         }
                         else
                         {
-                            printf("%c%c%c%c was not found in text", in1, in2, in3, in4);
+                            printf("\n\"%c%c%c%c\" was not found in text", in1, in2, in3, in4);
                         }
                     }
                     else if (in1 == ch2)
@@ -226,7 +226,7 @@ main()
                         }
                         else
                         {
-                            printf("%c%c%c%c was not found in text", in1, in2, in3, in4);
+                            printf("\n\"%c%c%c%c\" was not found in text", in1, in2, in3, in4);
                         }
                     }
                     else if (in1 == ch3)
@@ -237,12 +237,12 @@ main()
                         }
                         else
                         {
-                            printf("%c%c%c%c was not found in text", in1, in2, in3, in4);
+                            printf("\n\"%c%c%c%c\" was not found in text", in1, in2, in3, in4);
                         }
                     }
                     else
                     {
-                        printf("%c%c%c%c was not found in text", in1, in2, in3, in4);
+                        printf("\n\"%c%c%c%c\" was not found in text", in1, in2, in3, in4);
                     }
                 }
                 else if (len2 == 5)
@@ -256,7 +256,7 @@ main()
                         }
                         else
                         {
-                            printf("%c%c%c%c%c was not found in text", in1, in2, in3, in4, in5);
+                            printf("\n\"%c%c%c%c%c\" was not found in text", in1, in2, in3, in4, in5);
                         }
                     }
                     else if (in1 == ch2)
@@ -267,12 +267,12 @@ main()
                         }
                         else
                         {
-                            printf("%c%c%c%c%c was not found in text", in1, in2, in3, in4, in5);
+                            printf("\n\"%c%c%c%c%c\" was not found in text", in1, in2, in3, in4, in5);
                         }
                     }
                     else
                     {
-                        printf("%c%c%c%c%c was not found in text", in1, in2, in3, in4, in5);
+                        printf("\n\"%c%c%c%c%c\" was not found in text", in1, in2, in3, in4, in5);
                     }
                 }
                 else if (len2 == 6)
@@ -286,7 +286,7 @@ main()
                         }
                         else
                         {
-                            printf("%c%c%c%c%c%c was not found in text ", in1, in2, in3, in4, in5, in6);
+                            printf("\n\"%c%c%c%c%c%c\" was not found in text ", in1, in2, in3, in4, in5, in6);
                         }
                     }
                     else
@@ -309,6 +309,8 @@ main()
             if (out == 'y' || out == 'N')
             {
                 run = 1;
+                ch1 = '0', ch2 = '0', ch3 = '0', ch4 = '0', ch5 = '0', ch6 = '0';
+                in1 = '0', in2 = '0', in3 = '0', in4 = '0', in5 = '0', in6 = '0';
             }
             else
             {
