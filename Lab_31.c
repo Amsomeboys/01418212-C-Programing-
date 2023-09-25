@@ -73,6 +73,7 @@ main()
                 {
 
                     arr[i][j][k] = rand() % 200 + 1;
+                    // printf("Array[%d][%d][%d] : %d\n", i, j, k, arr[i][j][k]);
                     sortArr[index] = arr[i][j][k];
                     index++;
                 }
