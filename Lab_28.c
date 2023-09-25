@@ -1,8 +1,7 @@
 #include <stdio.h>
-
 main()
 {
-    int Array2D[10][10], Array3D[10][10][10], i, j, k, w_size = 0, h_size = 0, d_size = 0, select = 0, run = 1;
+    int Array2D[10][10], Array3D[10][10][10], i, j, k, w_size = 0, h_size = 0, d_size = 0, select = 0, run = 0;
     char finish = 'y';
     while (finish == 'y')
     {
@@ -17,7 +16,6 @@ main()
                 printf("Enter only \"1\" or \"2\"\n\n");
             }
         }
-
         switch (select)
         {
         case 1:
@@ -51,9 +49,9 @@ main()
                         h_size = -1;
                     }
                 }
-                for (i = 0; i < w_size; i++)
+                for (i = 0; i < h_size; i++)
                 {
-                    for (j = 0; j < h_size; j++)
+                    for (j = 0; j < w_size; j++)
                     {
                         Array2D[i][j] = 0;
                         printf("Array2D [%d][%d] = %d\n", i, j, Array2D[i][j]);
@@ -66,11 +64,11 @@ main()
             {
                 while (w_size <= 0 || w_size > 10)
                 {
-                    printf("Please input Array Width size (maximum = 10): ");
+                    printf("Please input Array Width (maximum = 10): ");
                     scanf("%d", &w_size);
                     if (w_size == 0)
                     {
-                        printf("\n\"Please enter width size > 0\"\n");
+                        printf("\n\"Please enter array width  > 0\"\n");
                     }
                     if (w_size > 10)
                     {
@@ -94,11 +92,11 @@ main()
                 }
                 while (d_size <= 0 || d_size > 10)
                 {
-                    printf("Please input Array Depth size (maximum = 10): ");
+                    printf("Please input Array Depth (maximum = 10): ");
                     scanf("%d", &d_size);
                     if (d_size == 0)
                     {
-                        printf("\n\"Please enter Depth size > 0\"\n");
+                        printf("\n\"Please enter depth  > 0\"\n");
                     }
                     if (d_size > 10)
                     {
@@ -106,11 +104,11 @@ main()
                         d_size = -1;
                     }
                 }
-                for (i = 0; i < w_size; i++)
+                for (i = 0; i < d_size; i++)
                 {
                     for (j = 0; j < h_size; j++)
                     {
-                        for (k = 0; k < d_size; k++)
+                        for (k = 0; k < w_size; k++)
                         {
                             Array3D[i][j][k] = 0;
                             printf("Array2D [%d][%d][%d] = %d\n", i, j, k, Array3D[i][j][k]);
@@ -123,6 +121,7 @@ main()
             printf("\"Select only 1 or 2\"\n");
             select = 0;
         }
+        run = 1;
         while (run == 1)
         {
             printf("\nContinue Program ? (y/N) : ");
@@ -134,7 +133,6 @@ main()
                 w_size = 0;
                 h_size = 0;
                 d_size = 0;
-                select = 0;
             }
             else
             {

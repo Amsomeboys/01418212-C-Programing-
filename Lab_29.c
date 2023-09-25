@@ -1,11 +1,9 @@
 #include <stdio.h>
-
 main()
 {
     float first1D[10], second1D[10], third1D[10];
     int i, size = 10, run = 0;
     char finish = 'y';
-
     while (finish == 'y')
     {
         for (i = 0; i < size; i++)
@@ -13,7 +11,6 @@ main()
             first1D[i] = 0;
             second1D[i] = 0;
         }
-
         printf("Enter number in first array (10 number)");
         for (i = 0; i < size; i++)
         {
@@ -34,18 +31,18 @@ main()
         printf("\nSum Array Result is  \n");
         for (i = 0; i < size; i++)
         {
-			printf("\nSumArr[%d] : ", i);
+            printf("\nSumArr[%d] : ", i);
             printf(" %.2f ", third1D[i]);
             printf("\n");
         }
-
-        while (run == 0)
+        run = 1;
+        while (run == 1)
         {
             printf("\n\nContinue Program ? (y/N) : ");
             scanf(" %c", &finish);
             if (finish == 'y' || finish == 'N')
             {
-                run = 1;
+                run = 0;
             }
             else
             {

@@ -8,19 +8,18 @@ void DrawBottom(int size);
 
 main()
 {
-
     int draw = 1;
-    int size=0;
+    int size = 0;
     int run = 0;
     char finish = 'y';
     while (finish == 'y')
     {
-		run = 0;
-		while(size<=0)
-		{
-        printf("Enter the size of the crucifix : ");
-        scanf("%d", &size);
-		}
+        run = 0;
+        while (size <= 0)
+        {
+            printf("Enter the size of the crucifix : ");
+            scanf("%d", &size);
+        }
 
         if (size > 0)
         {
@@ -33,24 +32,24 @@ main()
             printf("\"Enter size more than 0\"\n\n");
         }
         while (run == 0)
-		{
-		     printf("\n\nContinue Program ? (y/N) : ");
-		     scanf(" %c", &finish);
-		     if (finish == 'y' || finish == 'N')
-		     {
-		        run = 1;
-		        size = 0;
-		      }
-		      else
-		      {
-		         printf("Enter only \" y \" or \"N\"");
-		      }
-		 }
-		 if (finish == 'N')
-		 {
-		     printf("\"End Program\"");
-         }
-    	printf("\n");
+        {
+            printf("\n\nContinue Program ? (y/N) : ");
+            scanf(" %c", &finish);
+            if (finish == 'y' || finish == 'N')
+            {
+                run = 1;
+                size = 0;
+            }
+            else
+            {
+                printf("Enter only \" y \" or \"N\"");
+            }
+        }
+        if (finish == 'N')
+        {
+            printf("\"End Program\"");
+        }
+        printf("\n");
     }
 }
 
