@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
-void sort_3d_array(int arr[5][5][5], int d_size, int h_size, int w_size);
-int arr[5][5][5], sortArr[125], d_size = 0, h_size = 0, w_size = 0, index = 0, i = 0, j = 0, k = 0;
+void sort_3d_array(int arr[5][5][5], int d_size, int h_size, int w_size, int select);
+int arr[5][5][5], sortArr[125], d_size = 0, h_size = 0, w_size = 0, index = 0, i = 0, j = 0, k = 0, select = 0;
 main()
 {
     char finish = 'y', run = 0;
@@ -61,8 +61,13 @@ main()
                 d_size = -1;
             }
         }
+        while (select != 1 && select != 2)
+        {
+            printf("Min -> Max(1) or Max -> Min(2) (Enter 1 or Enter 2) : ");
+            scanf("%d", &select);
+        }
         printf("\n");
-        sort_3d_array(arr, d_size, h_size, w_size);
+        sort_3d_array(arr, d_size, h_size, w_size, select);
         run = 1;
         while (run == 1)
         {
@@ -88,7 +93,7 @@ main()
         }
     }
 }
-void sort_3d_array(int arr[5][5][5], int d_size, int h_size, int w_size)
+void sort_3d_array(int arr[5][5][5], int d_size, int h_size, int w_size, int select)
 {
     srand(time(NULL));
     int tmp = 0;
@@ -104,17 +109,38 @@ void sort_3d_array(int arr[5][5][5], int d_size, int h_size, int w_size)
             }
         }
     }
-    for (i = 0; i < w_size * h_size * d_size; i++)
+    switch (select)
     {
-        for (j = 0; j < w_size * h_size * d_size; j++)
+    case 1:
+        for (i = 0; i < w_size * h_size * d_size; i++)
         {
-            if (sortArr[j] > sortArr[j + 1])
+            for (j = 0; j < w_size * h_size * d_size; j++)
             {
-                tmp = sortArr[j];
-                sortArr[j] = sortArr[j + 1];
-                sortArr[j + 1] = tmp;
+                if (sortArr[j] > sortArr[j + 1])
+                {
+                    tmp = sortArr[j];
+                    sortArr[j] = sortArr[j + 1];
+                    sortArr[j + 1] = tmp;
+                }
             }
         }
+        break;
+    case 2:
+        for (i = 0; i < w_size * h_size * d_size; i++)
+        {
+            for (j = 0; j < w_size * h_size * d_size; j++)
+            {
+                if (sortArr[j] < sortArr[j + 1])
+                {
+                    tmp = sortArr[j + 1];
+                    sortArr[j + 1] = sortArr[j];
+                    sortArr[j] = tmp;
+                }
+            }
+        }
+        break;
+    default:
+        break;
     }
     index = 0;
     for (i = 0; i < d_size; i++)

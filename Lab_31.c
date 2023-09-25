@@ -3,7 +3,7 @@
 #include <time.h>
 main()
 {
-    int arr[5][5][5], sortArr[125], i = 0, j, k, n = 5, index = 0, tmp, w_size = 0, h_size = 0, d_size = 0, run = 0;
+    int arr[5][5][5], sortArr[125], i = 0, j, k, n = 5, index = 0, tmp, w_size = 0, h_size = 0, d_size = 0, run = 0, select = 0;
     char finish = 'y';
     while (finish == 'y')
     {
@@ -49,6 +49,12 @@ main()
                 d_size = -1;
             }
         }
+        while (select != 1 && select != 2)
+        {
+            printf("Min -> Max(1) or Max -> Min(2) (Enter 1 or Enter 2) : ");
+            scanf("%d", &select);
+        }
+
         printf("\n");
         for (i = 0; i < d_size; i++)
         {
@@ -79,17 +85,38 @@ main()
                 }
             }
         }
-        for (i = 0; i < w_size * h_size * d_size; i++)
+        switch (select)
         {
-            for (j = 0; j < w_size * h_size * d_size; j++)
+        case 1:
+            for (i = 0; i < w_size * h_size * d_size; i++)
             {
-                if (sortArr[j] > sortArr[j + 1])
+                for (j = 0; j < w_size * h_size * d_size; j++)
                 {
-                    tmp = sortArr[j];
-                    sortArr[j] = sortArr[j + 1];
-                    sortArr[j + 1] = tmp;
+                    if (sortArr[j] > sortArr[j + 1])
+                    {
+                        tmp = sortArr[j];
+                        sortArr[j] = sortArr[j + 1];
+                        sortArr[j + 1] = tmp;
+                    }
                 }
             }
+            break;
+        case 2:
+            for (i = 0; i < w_size * h_size * d_size; i++)
+            {
+                for (j = 0; j < w_size * h_size * d_size; j++)
+                {
+                    if (sortArr[j] < sortArr[j + 1])
+                    {
+                        tmp = sortArr[j + 1];
+                        sortArr[j + 1] = sortArr[j];
+                        sortArr[j] = tmp;
+                    }
+                }
+            }
+            break;
+        default:
+            break;
         }
         index = 0;
         for (i = 0; i < d_size; i++)
@@ -124,6 +151,7 @@ main()
                 w_size = 0;
                 h_size = 0;
                 d_size = 0;
+                select = 0;
             }
             else
             {
