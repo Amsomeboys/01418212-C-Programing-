@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-int factorial(int n);
+int factorial(int num);
 
 main()
 {
     int num, result_1, result_2, i;
+    printf("\"Find Factorial\"\n");
     printf("Enter a number: ");
     scanf("%d", &num);
 
@@ -25,11 +26,11 @@ main()
     printf("Factorial of %d is %d\n", num, result_2);
 }
 
-int factorial(int n)
+int factorial(int num)
 {
-    if (n <= 1)
+    if (num <= 1)
     {
         return 1;
     }
-    return n * factorial(n - 1);
+    return num * factorial(num - 1);
 }

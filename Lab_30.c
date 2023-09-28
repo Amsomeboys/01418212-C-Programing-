@@ -72,18 +72,19 @@ main()
             }
         }
         avg = sum / (w_size * h_size);
-        printf("\n\nAverage of multipy value in array is = %.2f ", avg);
+        printf("\n\nAverage of multipy value in array is  %.2f / %d  = \"%.2f\" ", sum,w_size*h_size,avg);
         run = 1;
         while (run == 1)
         {
             printf("\n\nContinue Program ? (y/N) : ");
             scanf(" %c", &finish);
-            printf("\n\n");
+            printf("\n");
             if (finish == 'y' || finish == 'N')
             {
                 run = 0;
                 w_size = 0;
                 h_size = 0;
+                sum=0;
             }
             else
             {
@@ -92,7 +93,7 @@ main()
         }
         if (finish == 'N')
         {
-            printf("\"End Program\"");
+            printf("\"End Program\"\n");
         }
     }
 }

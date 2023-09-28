@@ -1,6 +1,6 @@
 #include <stdio.h>
-void inputArr();
-void multipy_arr(float one2D[5][5], float two2D[5][5], float three2D[5][5], int w_size, int h_size);
+void inputArr(float arr[5][5]);
+void multipy(float one2D[5][5], float two2D[5][5], float three2D[5][5], int w_size, int h_size);
 float one2D[5][5], two2D[5][5], three2D[5][5];
 int w_size = 0, h_size = 0, i, j, count = 0;
 main()
@@ -40,10 +40,15 @@ main()
             }
         }
         printf("Enter number in first array (%d x %d) \n", w_size, h_size);
-        inputArr();
+        inputArr(one2D);
         printf("\nEnter number in second array (%d x %d) \n", w_size, h_size);
-        inputArr();
-        multiply_arr(one2D, two2D, three2D, w_size, h_size);
+        inputArr(two2D);
+        for(i=0;i<100;i++)
+		{
+			printf("-");
+		}
+		printf("Multipy Array\n");
+        multipy(one2D, two2D, three2D, w_size, h_size);
         for (i = 0; i < h_size; i++)
         {
             for (j = 0; j < w_size; j++)
@@ -76,7 +81,7 @@ main()
         }
     }
 }
-void inputArr()
+void inputArr(float arr[5][5])
 {
     for (i = 0; i < h_size; i++)
     {
@@ -85,22 +90,22 @@ void inputArr()
             if (count == 0)
             {
                 printf("FirstArr[%d][%d] : ", i, j);
-                scanf("%f", &one2D[i][j]);
+                scanf("%f", &arr[i][j]);
             }
             else
             {
                 printf("SecondArr[%d][%d] : ", i, j);
-                scanf("%f", &two2D[i][j]);
+                scanf("%f", &arr[i][j]);
             }
         }
     }
     count++;
-};
-void multiply_arr(float one2D[5][5], float two2D[5][5], float three2D[5][5], int w_size, int h_size)
+}
+void multipy(float one2D[5][5], float two2D[5][5], float three2D[5][5], int w_size, int h_size)
 {
-    for (int i = 0; i < h_size; i++)
+    for (i = 0; i < h_size; i++)
     {
-        for (int j = 0; j < w_size; j++)
+        for (j = 0; j < w_size; j++)
         {
             three2D[i][j] = one2D[i][j] * two2D[i][j];
             printf("\nThree[%d][%d] : %.2f", i, j, three2D[i][j]);

@@ -7,7 +7,7 @@ main()
     char finish = 'y';
     while (finish == 'y')
     {
-        while (w_size <= 0 || w_size > 10)
+        while (w_size <= 0 || w_size > 5)
         {
             printf("Please input Array Width (maximum = 5): ");
             scanf("%d", &w_size);
@@ -51,7 +51,7 @@ main()
         }
         while (select != 1 && select != 2)
         {
-            printf("Min -> Max(1) or Max -> Min(2) (Enter 1 or Enter 2) : ");
+            printf("\n\"Min -> Max(1) or Max -> Min(2)\" (Enter 1 or Enter 2) : ");
             scanf("%d", &select);
         }
 
@@ -71,6 +71,7 @@ main()
             sortArr[i] = 0;
         }
         srand(time(NULL));
+        printf("\"Before Sort\"\n");
         for (i = 0; i < d_size; i++)
         {
             for (j = 0; j < h_size; j++)
@@ -79,12 +80,19 @@ main()
                 {
 
                     arr[i][j][k] = rand() % 200 + 1;
-                    // printf("Array[%d][%d][%d] : %d\n", i, j, k, arr[i][j][k]);
+                    printf("Array[%d][%d][%d] : %d\n", i, j, k, arr[i][j][k]);
                     sortArr[index] = arr[i][j][k];
                     index++;
                 }
             }
         }
+        for(i=0;i<100;i++)
+        {
+			printf("-");
+		}
+		printf("\n\n");
+
+		printf("\"After Sort\"\n");
         switch (select)
         {
         case 1:
@@ -152,6 +160,7 @@ main()
                 h_size = 0;
                 d_size = 0;
                 select = 0;
+                index = 0;
             }
             else
             {

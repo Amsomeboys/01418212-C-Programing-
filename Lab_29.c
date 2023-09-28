@@ -11,16 +11,16 @@ main()
             first1D[i] = 0;
             second1D[i] = 0;
         }
-        printf("Enter number in first array (10 number)");
+        printf("Enter number in first array (10 number)\n");
         for (i = 0; i < size; i++)
         {
-            printf("\nFirst[%d] : ", i);
+            printf("First[%d] : ", i);
             scanf("%f", &first1D[i]);
         }
-        printf("Enter number in second array (10 number)");
+        printf("\nEnter number in second array (10 number)\n");
         for (i = 0; i < size; i++)
         {
-            printf("\nSecond[%d] : ", i);
+            printf("Second[%d] : ", i);
             scanf("%f", &second1D[i]);
         }
 

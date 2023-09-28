@@ -1,5 +1,5 @@
 #include <stdio.h>
-void inputArr();
+void inputArr(float arr[10]);
 void plusArray(float first[10], float second[10]);
 void printResult(float sumArr[10]);
 float first1D[10], second1D[10], third1D[10];
@@ -18,9 +18,9 @@ main()
     {
         run = 0;
         printf("Enter number in first array (10 number)\n");
-        inputArr();
+        inputArr(first1D);
         printf("Enter number in second array (10 number)\n");
-        inputArr();
+        inputArr(second1D);
         plusArray(first1D, second1D);
         printResult(third1D);
         while (run == 0)
@@ -43,20 +43,19 @@ main()
         }
     }
 }
-void inputArr()
+void inputArr(float arr[10])
 {
     for (i = 0; i < size; i++)
     {
         if (count == 0)
         {
             printf("FirstArr[%d] : ", i);
-            scanf("%f", &first1D[i]);
         }
         else
         {
             printf("SecondArr[%d] : ", i);
-            scanf("%f", &second1D[i]);
         }
+        scanf("%f", &arr[i]);
     }
     count++;
 };
