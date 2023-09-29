@@ -23,7 +23,7 @@ main()
             for (k = 0; k < size; k++)
             {
                 printf("Arr[%d][%d][%d] : ", i, j, k);
-                scanf("%f", arr[i][j][k]);
+                scanf("%f", &arr[i][j][k]);
             }
         }
     }
@@ -36,11 +36,11 @@ main()
             {
                 p = &arr[i][j][k];
                 sum += *p;
-                printf("%u : %.2f\n", p, sum);
+                printf("%u : %.2f\n", p, *p);
             }
         }
     }
-
+printf("%f",sum);
     // for (i = 0; i < size; i++)
     // {
     //     for (j = 0; j < size; j++)
