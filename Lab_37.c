@@ -2,9 +2,7 @@
 main()
 {
     float arr[3][3][3], *p, sum;
-    int i, j, k, size = 3;
-
-    p = &arr;
+    int i, j, k, size = 2;
 
     for (i = 0; i < size; i++)
     {
@@ -29,14 +27,16 @@ main()
             }
         }
     }
-
+    printf("\n\n");
     for (i = 0; i < size; i++)
     {
         for (j = 0; j < size; j++)
         {
             for (k = 0; k < size; k++)
             {
-                sum += *(p + k)
+                p = &arr[i][j][k];
+                sum += *p;
+                printf("%u : %.2f\n", p, sum);
             }
         }
     }
