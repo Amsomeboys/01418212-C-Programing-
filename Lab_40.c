@@ -3,65 +3,101 @@ main()
 {
     float arr[2][2][5];
     float *ptr, *ptr2;
-    int i, j, k, w_size = 5, h_size = 2, d_size = 2, Mw = 0, Mh = 0, Md = 0, mw = 0, mh = 0, md = 0;
+    int i, j, k, run, w_size = 5, h_size = 2, d_size = 2, Mw = 0, Mh = 0, Md = 0, mw = 0, mh = 0, md = 0;
+    char finish = 'y';
 
-    printf("Input Array\n");
-    for (i = 0; i < d_size; i++)
+    while (finish == 'y')
     {
-        for (j = 0; j < h_size; j++)
+
+        for (i = 0; i < d_size; i++)
         {
-            for (k = 0; k < w_size; k++)
+            for (j = 0; j < h_size; j++)
             {
-                printf("arr[%d][%d][%d] : ", i, j, k);
-                scanf("%f", &arr[i][j][k]);
-            }
-        }
-    }
-    for (i = 0; i < d_size; i++)
-    {
-        for (j = 0; j < h_size; j++)
-        {
-            for (k = 0; k < w_size; k++)
-            {
-                if (i == 0 && j == 0 && k == 0)
+                for (k = 0; k < w_size; k++)
                 {
-                    ptr = &arr[i][j][k];
-                    ptr2 = &arr[i][j][k];
-                }
-                if (*ptr < arr[i][j][k])
-                {
-                    ptr = &arr[i][j][k];
-                }
-                if (*ptr2 > arr[i][j][k])
-                {
-                    ptr2 = &arr[i][j][k];
+                    arr[i][j][k] = 0;
                 }
             }
         }
-    }
 
-    for (i = 0; i < d_size; i++)
-    {
-        for (j = 0; j < h_size; j++)
+        printf("Input Array\n");
+        for (i = 0; i < d_size; i++)
         {
-            for (k = 0; k < w_size; k++)
+            for (j = 0; j < h_size; j++)
             {
-                if (&arr[i][j][k] == ptr)
+                for (k = 0; k < w_size; k++)
                 {
-                    Md = i;
-                    Mh = j;
-                    Mw = k;
-                }
-                if (&arr[i][j][k] == ptr2)
-                {
-                    md = i;
-                    mh = j;
-                    mw = k;
+                    printf("arr[%d][%d][%d] : ", i, j, k);
+                    scanf("%f", &arr[i][j][k]);
                 }
             }
         }
-    }
+        for (i = 0; i < d_size; i++)
+        {
+            for (j = 0; j < h_size; j++)
+            {
+                for (k = 0; k < w_size; k++)
+                {
+                    if (i == 0 && j == 0 && k == 0)
+                    {
+                        ptr = &arr[i][j][k];
+                        ptr2 = &arr[i][j][k];
+                    }
+                    if (*ptr < arr[i][j][k])
+                    {
+                        ptr = &arr[i][j][k];
+                    }
+                    if (*ptr2 > arr[i][j][k])
+                    {
+                        ptr2 = &arr[i][j][k];
+                    }
+                }
+            }
+        }
 
-    printf("\n\"Max value is %.2f at Array[%d][%d][%d]\"\n", *ptr, Md, Mh, Mw);
-    printf("\n\"Min value is %.2f at Array[%d][%d][%d]\"\n\n", *ptr2, md, mh, mw);
+        for (i = 0; i < d_size; i++)
+        {
+            for (j = 0; j < h_size; j++)
+            {
+                for (k = 0; k < w_size; k++)
+                {
+                    if (&arr[i][j][k] == ptr)
+                    {
+                        Md = i;
+                        Mh = j;
+                        Mw = k;
+                    }
+                    if (&arr[i][j][k] == ptr2)
+                    {
+                        md = i;
+                        mh = j;
+                        mw = k;
+                    }
+                }
+            }
+        }
+
+        printf("\n\"Max value is %.2f at Array[%d][%d][%d]\"\n", *ptr, Md, Mh, Mw);
+        printf("\n\"Min value is %.2f at Array[%d][%d][%d]\"\n\n", *ptr2, md, mh, mw);
+        run = 1;
+
+        run = 1;
+        while (run == 1)
+        {
+            printf("\n\ncontinue Program? (y/N): ");
+            scanf(" %c", &finish);
+            if (finish == 'y' || finish == 'N')
+            {
+                run = 0;
+            }
+            else
+            {
+                printf("Enter only \" y \" or \"N\"");
+            }
+        }
+        if (finish == 'N')
+        {
+            printf("\"End Program\"\n");
+        }
+    }
 }
