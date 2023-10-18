@@ -17,6 +17,7 @@ main()
     printf("*ptr_pyr=%u\n", *ptr_ptr); // value in p -> address a;
 
     printf("**ptr_pyr=%u\n", **ptr_ptr); // value in p(address a) -> value in a;
+
     // float x = 5.00, y = 10.00;
     // printf("x=%.2f,y=%.2f\n", x, y);
     // swap(&x, &y);
