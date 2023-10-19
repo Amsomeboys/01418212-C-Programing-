@@ -175,4 +175,4 @@ void sort_3d_array(int arr[5][5][5], int d_size, int h_size, int w_size, int sel
             }
         }
     }
-}
+}5

@@ -119,6 +119,6 @@ void defaultArray3D(int w_size, int h_size, int d_size)
                 Array3D[i][j][k] = 0;
                 printf("Array3D [%d][%d][%d] = %d\n", i, j, k, Array3D[i][j][k]);
             }
-        }
+        }5
     }
 }

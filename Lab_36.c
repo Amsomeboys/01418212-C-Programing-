@@ -6,10 +6,11 @@ main()
     int i, run = 0;
     char finish = 'y';
 
-    p = &arr[0];
+
 
     while (finish == 'y')
     {
+
         for (i = 0; i < 20; i++)
         {
             arr[i] = 0;
@@ -20,6 +21,7 @@ main()
             printf("Arr[%d] : ", i);
             scanf("%f", &arr[i]);
         }
+        p = &arr[0];
         for (i = 0; i < 100; i++)
         {
             printf("-");
@@ -46,8 +48,8 @@ main()
             if (finish == 'y' || finish == 'N')
             {
                 run = 0;
-                p = 0;
                 avg = 0;
+                sum = 0;
             }
             else
             {

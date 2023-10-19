@@ -110,5 +110,5 @@ void multipy(float one2D[5][5], float two2D[5][5], float three2D[5][5], int w_si
             three2D[i][j] = one2D[i][j] * two2D[i][j];
             printf("\nThree[%d][%d] : %.2f", i, j, three2D[i][j]);
         }
-    }
+    }5
 }
