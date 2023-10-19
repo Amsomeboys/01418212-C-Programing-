@@ -8,15 +8,16 @@ main()
 {
     int run = 0;
     char finish = 'y';
-    for (i = 0; i < size; i++)
-    {
-        first1D[i] = 0;
-        second1D[i] = 0;
-        third1D[i] = 0;
-    }
+
     while (finish == 'y')
     {
         run = 0;
+        for (i = 0; i < size; i++)
+		{
+			first1D[i] = 0;
+		    second1D[i] = 0;
+		    third1D[i] = 0;
+    	}
         printf("Enter number in first array (10 number)\n");
         inputArr(first1D);
         printf("Enter number in second array (10 number)\n");
