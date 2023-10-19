@@ -8,6 +8,7 @@ main()
 
     while (finish == 'y')
     {
+		select =0;
         while (select != 1 && select != 2)
         {
             printf("\nArray2D Enter (1) / Array3D Enter (2) : ");
