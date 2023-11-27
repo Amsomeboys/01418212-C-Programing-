@@ -31,7 +31,7 @@ main()
             printf("\nArr2D[%d][%d] : %u", i, j, p2++);
         }
     }
-    printf("\n");2
+    printf("\n");
     for (i = 0; i < size; i++)
     {
         for (j = 0; j < size; j++)

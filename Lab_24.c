@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-// score = 5
-
 void plus(float A, float B);
 void minus(float A, float B);
 void multiply(float A, float B);
@@ -12,37 +10,37 @@ void PrintResultInt(int result);
 
 main()
 {
-    float fn1, fn2,  result;
-    int num1,num2;
+    float fn1, fn2, result;
+    int num1, num2;
     int choose, work = 1, out = 'y';
 
     while (out == 'y')
     {
-		work=1;
+        work = 1;
         printf("Choose Method ->\n (1)Plus\n (2)Minus\n (3)Multiply\n (4)Divided\n (5)Mod\n");
         printf("\nSelect -> : ");
         scanf("%d", &choose);
 
-       	if(choose == 1)
-       	{
-			printf("\n\"Plus number\"\n");
-		}
-		else if(choose ==2)
-		{
-			printf("\n\"Minus number\"\n");
-		}
-		else if(choose == 3)
-		{
-			printf("\n\"Multiply number\"\n");
-		}
-		else if(choose == 4)
-		{
-			printf("\n\"Divided number\"\n");
-		}
-		else if(choose == 5)
-		{
-			printf("\n\"Mod number\"\n");
-		}
+        if (choose == 1)
+        {
+            printf("\n\"Plus number\"\n");
+        }
+        else if (choose == 2)
+        {
+            printf("\n\"Minus number\"\n");
+        }
+        else if (choose == 3)
+        {
+            printf("\n\"Multiply number\"\n");
+        }
+        else if (choose == 4)
+        {
+            printf("\n\"Divided number\"\n");
+        }
+        else if (choose == 5)
+        {
+            printf("\n\"Mod number\"\n");
+        }
 
         if (choose >= 1 && choose <= 4)
         {
@@ -66,7 +64,7 @@ main()
 
             break;
         case 2:
-          	minus(fn1, fn2);
+            minus(fn1, fn2);
 
             break;
         case 3:
@@ -86,7 +84,7 @@ main()
         {
             printf("Continue Program ? (y/N) : ");
             scanf(" %c", &out);
-            if(out == 'y' || out == 'N')
+            if (out == 'y' || out == 'N')
             {
                 work = 0;
             }
@@ -140,15 +138,15 @@ void divided(float A, float B)
 }
 void mod(int A, int B)
 {
-	int result;
-	result = A % B;
+    int result;
+    result = A % B;
     PrintResultInt(result);
 }
 void PrintResult(float result)
 {
-	printf("\nResult is : %.2f\n\n", result);
+    printf("\nResult is : %.2f\n\n", result);
 }
 void PrintResultInt(int result)
 {
-	printf("\nResult is : %d\n\n", result);
+    printf("\nResult is : %d\n\n", result);
 }

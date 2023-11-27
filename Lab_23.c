@@ -1,5 +1,4 @@
 #include <stdio.h>
-// score = 5
 main()
 {
     char flight, tf, con = 'y';

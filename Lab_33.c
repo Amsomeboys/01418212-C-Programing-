@@ -1,9 +1,11 @@
 #include <stdio.h>
+
 void inputArr(float arr[10]);
 void plusArray(float first[10], float second[10]);
 void printResult(float sumArr[10]);
 float first1D[10], second1D[10], third1D[10];
 int i, size = 10, count = 0;
+
 main()
 {
     int run;
@@ -13,11 +15,11 @@ main()
     {
         run = 0;
         for (i = 0; i < size; i++)
-		{
-			first1D[i] = 0;
-		    second1D[i] = 0;
-		    third1D[i] = 0;
-    	}
+        {
+            first1D[i] = 0;
+            second1D[i] = 0;
+            third1D[i] = 0;
+        }
         printf("Enter number in first array (10 number)\n");
         inputArr(first1D);
         printf("Enter number in second array (10 number)\n");
@@ -74,4 +76,4 @@ void printResult(float sumArr[10])
     {
         printf("\nThird[%d] : %.2f ", i, sumArr[i]);
     }
-}5
+}

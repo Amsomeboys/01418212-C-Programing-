@@ -24,16 +24,6 @@ main()
         printf("\"Second Array\"\n");
         inputArr(arr2, size);
         printf("\n");
-        for (i = 0; i < size; i++)
-        {
-            printf("arr[%d] : %d\n", i, arr[i]);
-        }
-        printf("\n");
-        for (i = 0; i < size; i++)
-        {
-            printf("arr2[%d] : %d\n", i, arr2[i]);
-        }
-
         printf("\"Before Swap\"\n\n");
         printf("\"First Array Address\"\n");
         printAddress(arr, size);
@@ -71,7 +61,7 @@ int inputArr(int arr[5], int size)
     for (i = 0; i < size; i++)
     {
         printf("arr [%d] : ", i);
-        scanf("%f", &arr[i]);
+        scanf("%d", &arr[i]);
     }
     printf("\n");
 }

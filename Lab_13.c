@@ -1,5 +1,4 @@
 #include <stdio.h>
-// score = 5
 main()
 {
 	int start = 0, end, count;
@@ -29,24 +28,24 @@ main()
 			while (start > 0 && end > 0)
 			{
 				printf("\nPrime numbers in this range is :");
-				while (start <= end) // check start < end ?
-				{					 // 8
-					i = 1;			 // reset to default value every round
+				while (start <= end)
+				{
+					i = 1;
 					count = 0;
-					while (i <= start && count < 3)			// check i < start number ? and mod == 0 count < 3
-					{										// 9
-						while (start % i == 0 && count < 3) // check mod == 0 and count < 3
-						{									// 10
-							count++;						// count +1
-							i++;							// i+1
-						}									// 10
-						i++;								// i+1
-					}										// 9
-					while (count == 2)						// count == 2
-					{										// 11
+					while (i <= start && count < 3)
+					{
+						while (start % i == 0 && count < 3)
+						{
+							count++;
+							i++;
+						}
+						i++;
+					}
+					while (count == 2)
+					{
 						printf("%d  ", start);
-						p++;	   // print
-						count = 0; // reset to out loop
+						p++;
+						count = 0;
 					}
 					while (p == 0)
 					{

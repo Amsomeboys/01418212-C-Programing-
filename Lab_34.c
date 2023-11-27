@@ -1,8 +1,10 @@
 #include <stdio.h>
+
 void inputArr(float arr[5][5]);
 void multipy(float one2D[5][5], float two2D[5][5], float three2D[5][5], int w_size, int h_size);
 float one2D[5][5], two2D[5][5], three2D[5][5];
 int w_size = 0, h_size = 0, i, j, count = 0;
+
 main()
 {
     float sum = 0, avg = 0;
@@ -43,11 +45,11 @@ main()
         inputArr(one2D);
         printf("\nEnter number in second array (%d x %d) \n", w_size, h_size);
         inputArr(two2D);
-        for(i=0;i<100;i++)
-		{
-			printf("-");
-		}
-		printf("Multipy Array\n");
+        for (i = 0; i < 100; i++)
+        {
+            printf("-");
+        }
+        printf("Multipy Array\n");
         multipy(one2D, two2D, three2D, w_size, h_size);
         for (i = 0; i < h_size; i++)
         {
@@ -110,5 +112,5 @@ void multipy(float one2D[5][5], float two2D[5][5], float three2D[5][5], int w_si
             three2D[i][j] = one2D[i][j] * two2D[i][j];
             printf("\nThree[%d][%d] : %.2f", i, j, three2D[i][j]);
         }
-    }5
+    }
 }

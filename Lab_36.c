@@ -6,11 +6,8 @@ main()
     int i, run = 0;
     char finish = 'y';
 
-
-
     while (finish == 'y')
     {
-
         for (i = 0; i < 20; i++)
         {
             arr[i] = 0;
@@ -27,14 +24,9 @@ main()
             printf("-");
         }
         printf("\n\n");
-        printf("\"Value Pointer of Array\"\n\n");
         for (i = 0; i < 20; i++)
         {
             sum += *(p + i);
-        }
-        for (i = 0; i < 20; i++)
-        {
-            printf("Pointer value [%u] : %.2f \n", p + i, *(p + i));
         }
 
         avg = sum / 20;

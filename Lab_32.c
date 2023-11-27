@@ -3,7 +3,7 @@ void defaultArray2D(int w_size, int h_size);
 void defaultArray3D(int w_size, int h_size, int d_size);
 main()
 {
-    int select=0, w_size = 0, h_size = 0, d_size = 0;
+    int select = 0, w_size = 0, h_size = 0, d_size = 0;
     char finish = 'y';
 
     while (finish == 'y')
@@ -119,6 +119,6 @@ void defaultArray3D(int w_size, int h_size, int d_size)
                 Array3D[i][j][k] = 0;
                 printf("Array3D [%d][%d][%d] = %d\n", i, j, k, Array3D[i][j][k]);
             }
-        }5
+        }
     }
 }

@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-// score = 5
-
 void DrawTop(int size);
 void DrawMiddle(int size);
 void DrawBottom(int size);
